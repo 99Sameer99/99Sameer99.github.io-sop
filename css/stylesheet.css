@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #403c00;
+}
+
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+.header {
+    padding: 5vw;
+    text-align: center;
+    background: url("../images/rain_and_road.jpg");
+    color: white;
+  }
+
+.parallax {
+    height: 25vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header h1 {
+    margin: 2vw 0 0 0;
+    font-size: 5vw;
+}
+.header p {
+  margin: 0;
+  font-size: 2vw;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #e5d700;
+    margin: 3px 0;
+}
+
+.navbar a {
+    float: left;
+    display: block; 
+    color: #403c00;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar a:hover {
+    background-color: #403c00;
+    color: #ffef00;
+}
+  
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.side {
+    flex: 30%; /* width of the sidebar */
+    background-color: #7f7700;
+    padding: 20px;
+}
+.side img {
+  width: 100%;
+  padding: 2vw;
+}
+  
+/* Main column */
+.main {
+    flex: 70%; /* width of the main content */
+    background-color: #bfb300;
+    padding: 20px;
+}
+/* arranging cards */
+.column {
+  float: left;
+  flex-wrap: wrap;
+  width: 25%;
+  margin: 0.5rem 1rem;
+  transition: 0.2s;
+}
+.card {
+  background-color: #403c00;
+  color: #ffef00;
+  padding: 5px;
+  justify-content: center;
+}
+.column a {
+  text-decoration: none;
+}
+.card img {
+  width: 100%;
+}
+.card h4, p {
+  margin: 0;
+  padding: 0;
+}
+.column:hover {
+  transform: scale(1.05);
+}
+
+.main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* footer styling */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: black;
+    color: #ffef00;
+}
+.footer blockquote{
+  font-size: 2vw;
+}
+/* contents */
+.content {
+  color: #ffef00;
+  padding: 1vw 10vw;
+}
+.sources h3 {
+  color: #e5d700;
+  padding: 0;
+}
+.sources a {
+  color: #ffef00;
+  text-decoration: none;
+}
+.sources a:hover {
+  color: #e5d700;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .column {
+      flex-direction: column;
+  }
+}
+  
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a, .column {
+      float: none;
+      width: 100%;
+  }
+}
